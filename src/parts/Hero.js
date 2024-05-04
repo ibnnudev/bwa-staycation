@@ -9,9 +9,15 @@ import IcCities from "../assets/icons/ic_cities.svg";
 import Mockup from "../assets/images/banner.png";
 
 export default function Hero(props) {
+  function showMostPick() {
+    window.scrollTo({
+      top: props.refMostPicked.current.offsetTop - 30,
+      behavior: "smooth",
+    });
+  }
   return (
     <section className="bg-white dark:bg-gray-900">
-      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <div className="grid max-w-screen-xl py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-snug md:text-5xl xl:text-5xl dark:text-white text-font-primary">
             Forget Busy Work,
@@ -23,12 +29,13 @@ export default function Hero(props) {
             make another memorable moments.
           </p>
           <a
+            onClick={showMostPick}
             href="#"
             className="inline-flex items-center justify-center px-9 py-3.5 text-lg font-medium text-center text-white rounded-sm bg-button-primary hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 shadow-primary-200 shadow-md"
           >
             Show Me Now
           </a>
-          <div className="grid lg:grid-cols-3 gap-6 mt-20">
+          <div className="grid grid-cols-3 gap-6 mt-20">
             <div className="space-y-2">
               <img src={IcTraveler} width={32} height={32} alt="" />
               <p className="text-font-primary font-semibold">

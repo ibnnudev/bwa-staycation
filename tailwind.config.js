@@ -9,6 +9,7 @@ module.exports = {
         "font-primary": "#152C5B",
         "font-gray": "#B0B0B0",
         "button-primary": "#3252DF",
+        "label-pink": "#FF498B",
         primary: {
           50: "#eff6ff",
           100: "#dbeafe",
